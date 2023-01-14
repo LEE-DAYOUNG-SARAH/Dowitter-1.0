@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ page import="kr.ac.green.dto.User" %>
+<%
+	User user = (User)session.getAttribute("loginUser");
+if(user == null){
+	String nextPage = "accessDenied.do";
+%>
+	<jsp:forward page="<%= nextPage %>"></jsp:forward>
+<%
+}
+%>

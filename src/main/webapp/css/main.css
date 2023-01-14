@@ -1,0 +1,514 @@
+@charset "EUC-KR";
+
+
+/*
+	init
+*/
+body {
+	min-height: 100vh;
+	min-width: 1280px;
+	font-family: sans-serif;
+}
+
+body, ul, li, div, a,select,p {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	color: #333333;
+}
+li {
+	list-style-type: none;
+}
+
+input[type="button"]{
+	display: none;
+}
+textarea{
+	resize: none;
+}
+
+/*
+	header
+*/
+
+#headerArea{
+	width: 100%;
+	position: relative;
+	height: 60px;
+	background-color: #fff;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 10px 0;
+}
+
+#headerArea .logo{
+	position: absolute;
+	width: 266px;
+	height: 60px;
+	box-sizing: border-box;
+	left: calc(50% - 133px);
+	top: 0;
+}
+#headerArea .logo img{
+	margin: 10px 0;
+}
+#headerArea .logout{
+	position: absolute;
+	right: 20px;
+	top: 0;
+	height: 40px;
+	padding: 10px;
+	line-height: 40px;
+}
+
+
+/*
+	timeline header
+*/
+
+#timelineHeader{
+	width: 100%;
+	position: relative;
+	height: 60px;
+	padding: 10px 0;
+	box-sizing: border-box;
+	background-color: #fff;
+}
+.safeArea{
+	width: 1280px;
+	margin: 0 auto;
+}
+.safeArea:after{
+	clear: both;
+	content:"";
+	display: block;
+}
+#timelineHeader .logo{
+	float: left;
+	height: 40px;
+}
+.searchArea{
+	position: absolute;
+	top: 15px;
+	left: calc(50% - 150px);
+	width: 300px;
+	height: 30px;
+}
+.inputArea{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	
+}
+.inputArea #search{
+	width: 100%;
+	height: 100%;
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	box-sizing: border-box;
+	font-size: 15px;
+	text-indent: 25px;
+}
+.inputArea label{
+	position: absolute;
+	top: 11px;
+	left: 7px;
+	line-height: 10px;
+	
+}
+.selectUserArea{
+	width: 100%;
+	position: absolute;
+	z-index: 11;
+	top: 35px;
+	left: 0;
+	border-radius: 15px;
+	border: 1px solid #ccc;
+	display: none;
+}
+.selectUserArea .searchedUser{
+	height: 36px;
+	box-sizing: border-box;
+	background-color: #fff;
+	width: 100%
+}
+.selectUserArea .searchedUser a{
+	display:block;
+	width: 100%;
+	height: 100%;
+	line-height: 36px;
+	text-indent: 10px;
+}
+.selectUserArea .searchedUser:hover{
+	background-color: #f0f0f0;
+}
+.selectUserArea li:first-child{
+	border-radius: 15px 15px 0px 0px;
+}
+.selectUserArea li:last-child{
+	border-radius: 0px 0px 15px 15px;
+}
+.selectUserArea li:first-child:last-child{
+	border-radius: 15px;
+}
+
+
+.userArea{
+	float: right;
+	height: 40px;
+}
+.userArea div{
+	height: 100%;
+	display: block;
+}
+.userArea a{
+	height: 100%;;
+	display: inline-block;
+	line-height: 40px;
+	margin-left: 20px;
+	
+}
+.userArea .loginUser:after{
+	clear: both;
+	content:"";
+	display: block;
+}
+.userArea .loginUser a{
+	float: left;
+	margin-left: 15px;;
+}
+.logo img{
+	height: 40px;
+	
+}
+
+/*
+	login
+*/
+
+#wrap{
+	min-height: 100vh;
+	width: 100%;
+	position: relative;
+	background-color: #ececec;
+}
+
+.contentBox{
+	width: 400px;
+	position: absolute;
+	background-color: #fff;
+	border-radius: 10px;
+	left: calc(50% - 200px);
+}
+.contentBoxLogin{
+	height: 400px;
+	top: calc(40% - 200px);
+}
+.contentLogin{
+	margin: 70px 0;;
+}
+.title{
+	font-size: 30px;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 30px;
+}
+.row{
+	text-align: center;
+}
+.row .inputBox{
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 16px;
+}
+.row label{
+	font-size: 14px;
+	color: #AAAAAA;
+	position: absolute;
+	line-height: 40px;
+	margin-left: 13px;
+}
+.row .longLabel{
+	margin-left: 10px;
+}
+.row input{
+	border : 1px solid #ccc;
+	border-radius: 20px;
+	width: 260px;
+	padding: 5px 20px;
+	height: 40px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 16px;
+	text-indent: 20px;
+}
+.btns{
+	width: 100%;
+	text-align: center;
+	margin-top: 35px;
+}
+.btns:after{
+	clear: both;
+	content:"";
+	display: block;
+}
+.btns>div{
+	cursor: pointer;
+	display: inline-block;
+	height: 44px;
+	line-height: 44px;
+	background-color: #aaa;
+	color : #fff;
+	margin-bottom: 10px;
+}
+.btns .confirm{
+	background-color: #37b9fe;
+}
+.btns .cancel{
+	margin-left: 10px;
+}
+.btns.alone>div{
+	width: 260px;
+}
+.btns>div{
+	width: 120px;
+}
+.btns a{
+	display: block;
+	color: #fff;
+}
+.textButton{
+	width: 100%;
+}
+.textButton a{
+	font-size: 16px;
+	width: 100px; height:30px;
+	line-height: 30px;
+	color: #37b9fe;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+}
+
+
+/*
+	Join	
+*/
+.contentBoxJoin{
+	height: 384px;
+	top: calc(40% - 192px);
+}
+.contentJoin{
+	margin: 38px 0;;
+}
+
+/*
+	modify
+*/
+.contentBoxModify{
+	height: 430px;
+	top: calc(40% - 215px);
+}
+.contentModify{
+	margin: 41px 0;;
+}
+.withdraw{
+	width: 150px;
+	height: 30px;
+	cursor: pointer;
+	margin: 10px auto;
+	line-height: 30px;
+	text-align: center;
+	color: red;
+	
+}
+
+
+/*
+	withdraw
+*/
+.contentBoxWithdraw{
+	height: 260px;
+	top: calc(40% - 130px);
+}
+.contentWithdraw{
+	margin: 33px 0;
+}
+.contentBoxText{
+	text-align: center;
+}
+
+
+/*
+	timeline
+*/
+
+#timelineBody{
+	width: 600px;
+	margin: 0 auto;
+}
+.timeline{
+	padding-top: 10px;
+}
+.writeFeed{
+	width: 600px;
+	height: 200px;
+	box-sizing: border-box;
+	padding: 10px;
+	background-color: #fff;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+.writeFeed:after{
+	clear: both;
+	content:"";
+	display: block;
+}
+.writeFeed textarea{
+	width: 100%;
+	height: 140px;
+	box-sizing: border-box;
+	margin-bottom: 5px;
+	padding: 10px;
+	border: none;
+	font-size: 18px;
+}
+.writeFeed>div{
+	width: 120px;
+	height: 30px;
+	background-color: #37b9fe;	
+	border-radius: 3px;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+	float: right;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.readFeeds{
+	width: 600px;
+	
+}
+.readFeeds .feed{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+.feedTitle::after{
+	clear: both;
+	content:"";
+	display: block;
+}
+.feedTitle .feedId{
+	float: left;
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.feedTitle .feedDate{
+	float: right;
+	color: #aaa;
+	font-size: 14px;
+	line-height: 28px;
+}
+.feed .feedContent{
+	font-size: 16px;
+}
+.readFeeds .nomore{
+	margin: 30px auto;
+	color: #AAA;
+	text-align: center;
+}
+.feedBtns{
+	margin-top: 8px;
+	text-align: right;
+}
+.feedBtns>div{
+	background: #ccc;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	height: 24px;
+	width: 80px;
+	line-height: 24px;
+	text-align: center;
+	
+}
+
+/*
+	myFeed
+*/
+#myFeedBody{
+	width: 600px;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+.myProfile{
+	width: 100%;
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 20px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+}
+.myProfile:after{
+	clear: both;
+	content:"";
+	display: block;
+}
+.myProfile .myProfileModify{
+	float: right;
+	color: #37b9fe;
+	cursor: pointer;
+	line-height: 25px;
+}
+.myProfile .myProfileId{
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
+	height: 25px;
+	line-height: 25px;
+}
+
+
+/*
+	modifier
+*/
+#modifierWrap{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+#modifierWrap.show{
+	display: block;
+}
+#modifierWrap .modifier{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color: rgba(0,0,0,0.1);
+}
+.modifier .modifyWindow{
+	position: absolute;
+	top: calc(40% - 100px);
+	left: calc(50% - 300px)
+}
+.modifier .writeFeed{
+	margin-top: 6px;
+}
+.modifier .writeFeed div{
+	width: 80px;
+	height: 24px;
+	line-height: 24px;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 16px;
+}
