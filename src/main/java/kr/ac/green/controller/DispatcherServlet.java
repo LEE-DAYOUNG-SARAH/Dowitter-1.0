@@ -18,7 +18,7 @@ public class DispatcherServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	//init
-	@Override
+    @Override
 	public void init(ServletConfig config) throws ServletException {
 		super.init(config);
 		CMDFactory.init();
@@ -34,11 +34,13 @@ public class DispatcherServlet extends HttpServlet {
 	}
 
 	//doGet
+    @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		process(request, response);
 	}
 
 	//doPost
+    @Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		process(request, response);
 	}
